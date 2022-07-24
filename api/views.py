@@ -12,7 +12,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -21,7 +21,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class ProjectsViewSet(viewsets.ModelViewSet):
     """
@@ -29,7 +29,7 @@ class ProjectsViewSet(viewsets.ModelViewSet):
     """
     queryset = Projects.objects.all()
     serializer_class = ProjectSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class ContactsViewSet(viewsets.ModelViewSet):
     """
@@ -37,6 +37,6 @@ class ContactsViewSet(viewsets.ModelViewSet):
     """
     queryset = Contacts.objects.all()
     serializer_class = ContactSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
