@@ -24,7 +24,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Projects
-        fields = ['id', 'title', 'description', 'featured', 'image', 'techonologies', 'link_to_live_version','link_to_dource']
+        fields = ['id', 'title', 'description', 'featured', 'image', 'technologies', 'link_to_live_version','link_to_source']
 
 
 class ContactSerializer(serializers.ModelSerializer):

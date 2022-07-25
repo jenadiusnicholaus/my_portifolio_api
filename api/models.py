@@ -19,11 +19,11 @@ class Technologies(models.Model):
 class Projects(models.Model):
     title = models.CharField(max_length= 400, null = True , blank=False)
     description = models.TextField(null=True)
-    featured =models.CharField(max_length=400,null=True, blank=False)
-    image=models.ImageField(upload_to ='uploads/% Y/% m/% d/')
-    techonologies = models.ManyToManyField(Technologies)
+    featured = models.CharField(max_length=400,null=True, blank=False)
+    image = models.ImageField(upload_to ='uploads/')
+    technologies = models.ManyToManyField(Technologies)
     link_to_live_version = models.URLField(null=True, blank=True)
-    link_to_dource = models.URLField(null=True, blank=True)
+    link_to_source = models.URLField(null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Projects list'
@@ -32,7 +32,7 @@ class Projects(models.Model):
 
 class Contacts(models.Model):
     name = models.CharField(max_length=30)
-    email= models.EmailField(unique=True,)
+    email = models.EmailField(unique=True,)
     message = models.TextField()
 
     class Meta:
