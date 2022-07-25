@@ -20,7 +20,7 @@ class TechnologiesSerializer(serializers.ModelSerializer):
         fields = ('id','name',)
 
 class ProjectSerializer(serializers.ModelSerializer):
-    techonologies = TechnologiesSerializer(many=True)
+    technologies = TechnologiesSerializer(many=True)
 
     class Meta:
         model = Projects
