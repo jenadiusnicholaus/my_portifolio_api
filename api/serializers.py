@@ -24,10 +24,10 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Projects
-        fields = ['title', 'description', 'featured', 'image', 'techonologies','link_to_live_version','link_to_dource']
+        fields = ['id', 'title', 'description', 'featured', 'image', 'techonologies', 'link_to_live_version','link_to_dource']
 
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contacts
-        fields = [ 'name', 'email', 'message']
+        fields = ['id', 'name', 'email', 'message']
